@@ -2,7 +2,7 @@
 
 # Aroma Shooter HTTP APIs
 
-Our HTTP APIs are available for Aroma Shooters with serial numbers beginning with “ASN2”. Using this API requires a Wi-Fi connection.
+Aromajoin's HTTP APIs are available for Aroma Shooters with serial numbers beginning with “ASN2”. Using this API requires a Wi-Fi connection.
 
 
 ## I. Wi-Fi connection setup
@@ -16,15 +16,7 @@ The Aroma Shooter app is available on the Apple App Store:
 
 https://apps.apple.com/app/aroma-shooter/id1477144583
 
-After you install the app, please follow the steps in this video: https://www.dropbox.com/s/k0ryn34caxqhifh/SetupWiFi_For_AromaShooter.mp4?dl=0.
-
-_NOTE: Your Aroma Shooter cannot maintain simultaneous Bluetooth BLE and Wi-Fi connections. If you are connected to your Aroma Shooter via Bluetooth BLE, disconnect it, check for the ‘No connection’ message at the bottom of the app's main screen, and reset its power by unplugging the power cable. Then, plug the cable back in._
-
-Use the following credentials to establish a connection to your Aroma Shooter.
-
-- SSID: ASN2XXXXX (This is your Aroma Shooter’s serial number. For example: “ASN2A5216”)
-
-- Password: aromajoin@1003
+After you install the app, tap the settings button in the bottom left corner of the screen, tap "Others," then tap "Setup AromaShooter's Wi-Fi," and follow the on-screen prompts. On the screen titled "Aroma Shooter Wi-Fi Connection," choose your preferred local Wi-Fi network and enter your credentials. After you receive a message confirming a successful connection, tap "Done" to return to the settings menu.
 
 
 ### Option 2 - Web Browser
@@ -37,22 +29,22 @@ After plugging in your Aroma Shooter to a power source, choose it from the avail
 
 Using a web browser on your device, navigate to this address: http://192.168.1.1/index.html
 
-From the list of Wi-Fi networks, choose your preferred local network and enter your password. After about 30 seconds, the Aroma Shooter will connect to your local network. Please wait for the success message before refreshing or navigating away from the page. You may now reconnect your device to the local network. It's time to try sending requests.
+From the list of Wi-Fi networks, choose your preferred local network and enter your password. After about 30 seconds, the Aroma Shooter will connect to your local network. Please wait for the success message before refreshing or navigating away from the page. You may now reconnect your computer/phone to the local network. It's time to try sending requests.
 
 
 ## II. APIs
 
-Now your Aroma Shooter is connected to a network through which it may receive HTTP requests, as long as you send the requests from a device on the same network.
+Now your Aroma Shooter is connected to a network through which it may receive HTTP requests, as long as you send the requests from a device on the same network. Using your preferred REST tools, submit requests via the following formats.
 
-**Hostname:** [Aroma Shooter IP address] or [Device serial].local
+**Hostname:** http://[Aroma Shooter IP address] or http://[Device serial].local
 
 **Port:** 1003
 
-For example, the hostname should match the following formats. Please do not copy these examples, as you must modify the IP addresses and/or serial numbers according to your device:
+The hostname structure should match one of these formats. Please do not copy these examples, as you must modify the IP addresses and/or serial numbers according to your Aroma Shooter(s):
 
-- http://192.168.1.10:1003 (This format is **recommended**, since it handles requests very quickly.)
+- IP address: http://192.168.1.10:1003 (This format is **recommended**, since it handles requests very quickly.)
 
-- http://ASN2A00001.local:1003 (This format may seem intuitive, but it handles requests slowly and is incompatible with Android devices.)
+- Device serial: http://ASN2A00001.local:1003 (This format may seem intuitive, but it handles requests slowly and is incompatible with Android devices.)
 
 
 ### Example requests:
@@ -60,7 +52,7 @@ For example, the hostname should match the following formats. Please do not copy
 
 1. **Get firmware information**
 
-*Path:* [device hostname]:1003/as2/firmware
+*Path:* /as2/firmware
 
 *Method:* GET
 
@@ -82,7 +74,7 @@ For example, the hostname should match the following formats. Please do not copy
 
 2. **Diffuse**
 
-*Path:* [device hostname]:1003/as2/diffuse
+*Path:* /as2/diffuse
 
 *Method:* POST
 
@@ -138,7 +130,7 @@ For example:
 
 3. **Stop diffusing**
 
-*Path:* [device hostname]:1003/as2/stop_all
+*Path:* /as2/stop_all
 
 *Method:* POST
 
