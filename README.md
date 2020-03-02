@@ -10,7 +10,7 @@ Aromajoin's HTTP APIs are available for Aroma Shooters with serial numbers begin
 There are two methods of connecting an Aroma Shooter to a Wi-Fi network: via Aromajoin's official iOS application or via a web browser.
 
 
-### Option 1 - Aroma Shooter iOS app
+### Option 1 - Aroma Shooter iOS app (recommended)
 
 The Aroma Shooter app is available on the Apple App Store:
 
