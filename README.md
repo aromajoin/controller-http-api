@@ -92,7 +92,7 @@ The hostname structure should match one of these formats. Please do not copy the
 
 "intensity": Int, // The cartridge intensity as a percentage. Range: 0 ~ 100
 
-"booster": Boolean // Set to true to activate the booster, . Default value is false.
+"booster": Boolean // Set to true to activate the Aroma Shooter's booster fan. Default value is false.
 
 }
 ```
