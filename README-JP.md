@@ -1,5 +1,6 @@
 [English](https://github.com/aromajoin/controller-http-api) / [日本語](README-JP.md)
 # アロマシューター制御用HTTP APIs
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/aromajoin-software/)
 
 アロマジョインのHTTP APIは「ASN2」から始まるアロマシューターに対して使えます。このAPIを使うにはWi-Fiネットワークが必要です。
 
