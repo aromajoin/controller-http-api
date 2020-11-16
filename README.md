@@ -1,6 +1,7 @@
 [English](https://github.com/aromajoin/controller-http-api) / [日本語](README-JP.md)
 
 # Aroma Shooter HTTP APIs
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/aromajoin-software/)
 
 Aromajoin's HTTP APIs are available for Aroma Shooters with serial numbers beginning with “ASN2”. Using this API requires a Wi-Fi connection.
 
