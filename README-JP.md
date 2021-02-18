@@ -83,35 +83,42 @@ iOSデバイスを持っていない方に別な方法です。
 
 
 ```javascript
-{
+  // For the latest firmware version
+  {
+    "channels": [number, ...], // The cartridge number. Range: 1 ~ 6
+    "intensities": [number, ...], // The cartridge intensity as a percentage. Range: 0 ~ 100
+    "durations": [number, ...], // Diffusion time in milliseconds. Range: 0 ~ 10000
+    "booster": boolean // Set to true to activate the Aroma Shooter's booster fan. Default value is false.
+  }
 
-"duration": Int, // ミリ秒単位の噴射時間、値レンジ：0 ~ 10000。
-
-"channel": Int, // カートリッジ番号、値レンジ: 1 ~ 6。
-
-"intensity": Int, // パーセンテージでカートリッジの強度、値レンジ: 0 ~ 100。
-
-"booster": Boolean // 真（True）に設定したら、アロマシューターのブースタファン（無臭ファン）が有効になります。
-                   // デフォルトは偽（False）です。
-
-}
+  // For the firmware lower than v2.0.0
+  {
+    "duration": Int, // ミリ秒単位の噴射時間、値レンジ：0 ~ 10000。
+    "channel": Int, // カートリッジ番号、値レンジ: 1 ~ 6。
+    "intensity": Int, // パーセンテージでカートリッジの強度、値レンジ: 0 ~ 100。
+    "booster": Boolean // 真（True）に設定したら、アロマシューターのブースタファン（無臭ファン）が有効になります。デフォルトは偽（False）です。
+  }
 ```
 
 例えば:
 
 
 ```javascript
-{
+  // For the latest firmware version
+  {
+      "channels": [1,3,5],
+      "intensities": [100,50,25],
+      "durations": [1000,2000,3000],
+      "booster": true
+  }
 
-"duration": 3000, // アロマシューターが3秒で噴射します。
-
-"channel": 3, // 3番カートリッジが噴射します。
-
-"intensity": 100, // 100％の強度で噴射します。
-
-"booster": true // 無臭のブースタのファンが有効になります。
-
-}
+  // For the firmware lower than v2.0.0
+  {
+    "duration": 3000, // アロマシューターが3秒で噴射します。
+    "channel": 3, // 3番カートリッジが噴射します。
+    "intensity": 100, // 100％の強度で噴射します。
+    "booster": true // 無臭のブースタのファンが有効になります。
+  }
 ```
 
 *レスポンス例:*
