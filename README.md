@@ -11,7 +11,7 @@ Aromajoin's HTTP APIs are available for Aroma Shooters with serial numbers begin
 There are two methods of connecting an Aroma Shooter to a Wi-Fi network: via Aromajoin's official iOS application or via a web browser.
 
 
-### Option 1 - Aroma Shooter iOS app (recommended)
+### Option 1 - Aroma Shooter iOS app
 
 The Aroma Shooter app is available on the Apple App Store:
 
@@ -28,7 +28,7 @@ After plugging in your Aroma Shooter to a power source, choose it from the avail
 
 - Password: aromajoin@1003
 
-Using a web browser on your device, navigate to this address: http://192.168.1.1/index.html
+Using a web browser on your device, navigate to this address: http://192.168.1.1/
 
 From the list of Wi-Fi networks, choose your preferred local network and enter your password. After about 30 seconds, the Aroma Shooter will connect to your local network. Please wait for the success message before refreshing or navigating away from the page. After you receive a message confirming a successful connection, tap the name of the Wi-Fi network again and take note of your device's IP Address -- you'll need this to send requests in Part II. You may now reconnect your computer/phone to the local network. It's time to try sending requests.
 
@@ -62,12 +62,9 @@ The hostname structure should match one of these formats. Please do not copy the
 *Response sample:*
 ```javascript
 {
-
-"current": "1.0.0",
-
-"latest": "1.0.1",
-
-"internet": "true"
+  "current": "1.0.0",
+  "latest": "1.0.1",
+  "internet": "true"
 
 }
 ```  
@@ -85,16 +82,20 @@ The hostname structure should match one of these formats. Please do not copy the
 
   
 ```javascript
+// For the latest firmware version
 {
+  "channels": [number, ...], // The cartridge number. Range: 1 ~ 6
+  "intensities": [number, ...], // The cartridge intensity as a percentage. Range: 0 ~ 100
+  "durations": [number, ...], // Diffusion time in milliseconds. Range: 0 ~ 10000
+  "booster": boolean // Set to true to activate the Aroma Shooter's booster fan. Default value is false.
+}
 
-"duration": Int, // Diffusion time in milliseconds. Range: 0 ~ 10000
-
-"channel": Int, // The cartridge number. Range: 1 ~ 6
-
-"intensity": Int, // The cartridge intensity as a percentage. Range: 0 ~ 100
-
-"booster": Boolean // Set to true to activate the Aroma Shooter's booster fan. Default value is false.
-
+// For the firmware lower than v2.0.0 
+{
+  "duration": int, // Diffusion time in milliseconds. Range: 0 ~ 10000
+  "channel": int, // The cartridge number. Range: 1 ~ 6
+  "intensity": int, // The cartridge intensity as a percentage. Range: 0 ~ 100
+  "booster": boolean // Set to true to activate the Aroma Shooter's booster fan. Default value is false.
 }
 ```
 
@@ -103,15 +104,18 @@ For example:
   
 ```javascript
 {
+    "channels": [1,3,5],
+    "intensities": [100,50,25],
+    "durations": [1000,2000,3000],
+    "booster": true
+}
 
-"duration": 3000, // The Aroma Shooter will diffuse for 3 seconds.
-
-"channel": 3, // The Aroma Shooter will diffuse the contents of the cartridge in slot 3.
-
-"intensity": 100, // Diffusing at maximum intensity.
-
-"booster": true // The booster fan will activate.
-
+// For the firmware lower than v2.0.0
+{
+  "duration": 3000, // The Aroma Shooter will diffuse for 3 seconds.
+  "channel": 3, // The Aroma Shooter will diffuse the contents of the cartridge in slot 3.
+  "intensity": 100, // Diffusing at maximum intensity.
+  "booster": true // The booster fan will activate.
 }
 ```
   
@@ -121,9 +125,7 @@ For example:
   
 ```javascript
 {
-
-"status": "done"
-
+  "status": "done"
 }
 
   ```
@@ -144,9 +146,7 @@ For example:
   
 ```javascript
 {
-
-"status": "done"
-
+  "status": "done"
 }
   ```
   
