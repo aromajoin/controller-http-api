@@ -86,17 +86,6 @@ Firmware version >= 2.0.0
     "booster": Boolean // Set to true to activate the Aroma Shooter's booster fan. Default value is false.
 }
 ```
-
-Firmware version < 2.0.0
-```javascript
-{
-    "duration": Number, // Diffusion time in milliseconds. Range: 0 ~ 10000
-    "channel": Number, // The cartridge number. Range: 1 ~ 6
-    "intensity": Number, // The cartridge intensity as a percentage. Range: 0 ~ 100
-    "booster": Boolean // Set to true to activate the Aroma Shooter's booster fan. Default value is false.
-}
-```
-
 *Request sample:*
 
 Firmware version >= 2.0.0
@@ -106,6 +95,16 @@ Firmware version >= 2.0.0
     "intensities": [100,50,25],
     "durations": [1000,2000,3000],
     "booster": true
+}
+```
+
+Firmware version < 2.0.0
+```javascript
+{
+    "duration": Number, // Diffusion time in milliseconds. Range: 0 ~ 10000
+    "channel": Number, // The cartridge number. Range: 1 ~ 6
+    "intensity": Number, // The cartridge intensity as a percentage. Range: 0 ~ 100
+    "booster": Boolean // Set to true to activate the Aroma Shooter's booster fan. Default value is false.
 }
 ```
 
