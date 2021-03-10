@@ -84,6 +84,17 @@ https://apps.apple.com/app/aroma-shooter/id1477144583
     "booster": Boolean // 真（True）に設定したら、アロマシューターのブースタファン（無臭ファン）が有効になります。デフォルトは偽（False）です。
 }
 ```
+*例えば:*
+
+ファームウェアバージョン >= 2.0.0
+```json
+{
+    "channels": [1,3,5],
+    "intensities": [100,50,25],
+    "durations": [1000,2000,3000],
+    "booster": true
+}
+```
 
 ファームウェアバージョン < 2.0.0
 ```javascript
