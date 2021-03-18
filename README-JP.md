@@ -43,18 +43,18 @@ https://apps.apple.com/app/aroma-shooter/id1477144583
 - シリアル番号: `http://ASN2A00001.local:1003` (こちらの形式は直観的ですが、遅い方です。そして、Android装置なら使用できない場合があります。)
 
 
-### リクエスト例:
+### API リスト
 
 
-1. **ファームウェア情報取得**
+#### 1. ファームウェア情報取得
 
-*Path:* /as2/firmware
+* *Path:* /as2/firmware
 
-*Method:* GET
+* *Method:* GET
 
-*Header:* “Content-Type: application/json”
+* *Header:* “Content-Type: application/json”
 
-*レスポンス例:*
+* *レスポンス例:*
 
 ```json
 {
@@ -65,17 +65,17 @@ https://apps.apple.com/app/aroma-shooter/id1477144583
 ```
 
 
-2. **噴射**
+#### 2. 香り噴射
 
-*Path:* /as2/diffuse
+* *Path:* /as2/diffuse
 
-*Method:* POST
+* *Method:* POST
 
-*Header:* “Content-Type: application/json”
+* *Header:* “Content-Type: application/json”
 
-*リクエスト中身:*
+* *リクエスト中身:*
 
-ファームウェアバージョン >= 2.0.0
+**ファームウェアバージョン 2.x.x以降**
 ```javascript
 {
     "channels": [Number, ...], // カートリッジ番号、値レンジ: 1 ~ 6。
@@ -85,8 +85,6 @@ https://apps.apple.com/app/aroma-shooter/id1477144583
 }
 ```
 *例えば:*
-
-ファームウェアバージョン >= 2.0.0
 ```json
 {
     "channels": [1,3,5],
@@ -96,7 +94,7 @@ https://apps.apple.com/app/aroma-shooter/id1477144583
 }
 ```
 
-ファームウェアバージョン < 2.0.0
+**ファームウェアバージョン 1.x.x**
 ```javascript
 {
     "duration": Number, // ミリ秒単位の噴射時間、値レンジ：0 ~ 10000。
@@ -107,18 +105,6 @@ https://apps.apple.com/app/aroma-shooter/id1477144583
 ```
 
 *例えば:*
-
-ファームウェアバージョン >= 2.0.0
-```json
-{
-    "channels": [1,3,5],
-    "intensities": [100,50,25],
-    "durations": [1000,2000,3000],
-    "booster": true
-}
-```
-
-ファームウェアバージョン < 2.0.0
 ```json
 {
     "duration": 3000,
@@ -137,19 +123,19 @@ https://apps.apple.com/app/aroma-shooter/id1477144583
 ```
 
 
-3. **噴射停止**
+#### 3. 噴射停止
 
-*Path:* /as2/stop_all
+* *Path:* /as2/stop_all
 
-*Method:* POST
+* *Method:* POST
 
-*Header:* “Content-Type: application/json”
+* *Header:* “Content-Type: application/json”
 
-*Request body:* None
+* *Request body:* None
 
-*レスポンス例:*
+* *レスポンス例:*
 
-ファームウェアバージョン >= 2.0.0
+**ファームウェアバージョン 2.x.x以降**
 ```json
 {
     "serial":"ASN2A00001",
@@ -157,7 +143,7 @@ https://apps.apple.com/app/aroma-shooter/id1477144583
 }
 ```
 
-ファームウェアバージョン < 2.0.0
+**ファームウェアバージョン 1.x.x**
 ```json
 {
     "status": "done"
