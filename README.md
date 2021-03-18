@@ -45,18 +45,18 @@ The hostname structure should match one of these formats. Please do not copy the
 - Device serial: `http://ASN2A00001.local:1003` (This format may seem intuitive, but it handles requests slowly and is incompatible with Android devices.)
 
 
-### Example requests:
+### API Lists
 
 
-1. **Get firmware information**
+#### 1. Get firmware information
 
-*Path:* /as2/firmware
+* *Path:* /as2/firmware
 
-*Method:* GET
+* *Method:* GET
 
-*Header:* “Content-Type: application/json”
+* *Header:* “Content-Type: application/json”
 
-*Response sample:*
+* *Response sample:*
 
 ```json
 {
@@ -67,17 +67,17 @@ The hostname structure should match one of these formats. Please do not copy the
 ```
   
 
-2. **Diffuse**
+#### 2. Diffuse scents
 
-*Path:* /as2/diffuse
+* *Path:* /as2/diffuse
 
-*Method:* POST
+* *Method:* POST
 
-*Header:* “Content-Type: application/json”
+* *Header:* “Content-Type: application/json”
 
-*Request body:*
+* *Request body:*
 
-Firmware version >= 2.0.0
+**Firmware version 2.x.x and later**
 ```javascript
 {
     "channels": [Number, ...], // The cartridge number. Range: 1 ~ 6
@@ -88,7 +88,6 @@ Firmware version >= 2.0.0
 ```
 *Request sample:*
 
-Firmware version >= 2.0.0
 ```json
 {
     "channels": [1,3,5],
@@ -98,7 +97,7 @@ Firmware version >= 2.0.0
 }
 ```
 
-Firmware version < 2.0.0
+**Firmware version 1.x.x**
 ```javascript
 {
     "duration": Number, // Diffusion time in milliseconds. Range: 0 ~ 10000
@@ -108,7 +107,6 @@ Firmware version < 2.0.0
 }
 ```
 
-Firmware version < 2.0.0
 ```json
 {
     "duration": 3000,
@@ -129,17 +127,17 @@ Firmware version < 2.0.0
 
 3. **Stop diffusing**
 
-*Path:* /as2/stop_all
+* *Path:* /as2/stop_all
 
-*Method:* POST
+* *Method:* POST
 
-*Header:* “Content-Type: application/json”
+* *Header:* “Content-Type: application/json”
 
-*Request body:* None
+* *Request body:* None
 
-*Response sample:*
+* *Response sample:*
 
-Firmware version >= 2.0.0
+**Firmware version 2.x.x and later**
 ```json
 {
     "serial":"ASN2A00001",
@@ -147,7 +145,7 @@ Firmware version >= 2.0.0
 }
 ```
 
-Firmware version < 2.0.0
+**Firmware version 1.x.x**
 ```json
 {
     "status": "done"
