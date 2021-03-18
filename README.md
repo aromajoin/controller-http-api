@@ -125,7 +125,7 @@ The hostname structure should match one of these formats. Please do not copy the
 ```
   
 
-3. **Stop diffusing**
+#### 3. Stop diffusing
 
 * *Path:* /as2/stop_all
 
