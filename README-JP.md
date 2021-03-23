@@ -151,4 +151,4 @@ https://apps.apple.com/app/aroma-shooter/id1477144583
 ```
 
 ----------
-Copyright 2020 Aromajoin Corporation under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
+Copyright 2021 Aromajoin Corporation under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.

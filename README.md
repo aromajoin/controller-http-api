@@ -153,4 +153,4 @@ The hostname structure should match one of these formats. Please do not copy the
 ```
 
 ----------
-Copyright 2020 Aromajoin Corporation under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
+Copyright 2021 Aromajoin Corporation under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
