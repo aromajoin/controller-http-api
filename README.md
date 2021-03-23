@@ -22,13 +22,13 @@ Using a web browser on your device, navigate to this address: `http://192.168.1.
 
 From the list of Wi-Fi networks, choose your preferred local network and enter your password. After about 30 seconds, the Aroma Shooter will connect to your local network. Please wait for the success message before refreshing or navigating away from the page. After you receive a message confirming a successful connection, tap the name of the Wi-Fi network again and take note of your device's IP Address -- you'll need this to send requests in Part II. You may now reconnect your computer/phone to the local network. It's time to try sending requests.
 
-### Option 2 - Aroma Shooter iOS app
+### Option 2 - Aroma Shooter iOS app (Only work with Firmware version lower than 2.0)
 
 The Aroma Shooter app is available on the Apple App Store:
 
 https://apps.apple.com/app/aroma-shooter/id1477144583
 
-After you install the app, tap the settings button in the bottom left corner of the screen, tap "Others," then tap "Setup AromaShooter's Wi-Fi," and follow the firmware version on-screen prompts. On the screen titled "Aroma Shooter Wi-Fi Connection," choose your preferred local Wi-Fi network and enter your credentials. After you receive a message confirming a successful connection, tap the name of the Wi-Fi network again and take note of your device's IP Address -- you'll need this to send requests in Part II. Tap "OK" then "Done" to return to the settings menu.
+After you install the app, tap the settings button in the bottom left corner of the screen, tap "Others," then tap "Setup AromaShooter's Wi-Fi," and follow the on-screen prompts. On the screen titled "Aroma Shooter Wi-Fi Connection," choose your preferred local Wi-Fi network and enter your credentials. After you receive a message confirming a successful connection, tap the name of the Wi-Fi network again and take note of your device's IP Address -- you'll need this to send requests in Part II. Tap "OK" then "Done" to return to the settings menu.
 
 ## II. APIs
 
@@ -152,5 +152,26 @@ The hostname structure should match one of these formats. Please do not copy the
 }
 ```
 
+## FAQs
+
+### Why I could not see Aroma Shooter’s Wi-Fi hotspot?
+To save the device energy and resource, the hotspot will be automatically disabled in two following scenarios.
+If Aroma Shooter is already connected to a Wi-Fi network, the hotspot is automatically off.
+If Aroma Shooter is being controlled via USB or Bluetooth, the hotspot and Wi-Fi connection ability is disabled.
+Therefore, to set up Wi-Fi for Aroma Shooter, it is necessary to turn it off and on again if it is controlled via PCs or smart phones.
+ 
+### How can I confirm if Aroma Shooter is already connected to a Wi-Fi router?
+The simplest way is to use IP scanning software on a PC or mobile phone that is connected to the same Wi-Fi router.  It will help you to scan all the IP addresses in the same network, so you can check if Aroma Shooter IP address is listed there. If it is listed there, it means that it is connected successfully. 
+For example, if you are using Windows PC, you can use [Advanced IP Scanner](https://www.advanced-ip-scanner.com/).
+
+### Does the Wi-Fi settings are kept in case of power down?
+Yes. The WiFi settings are kept even the power is down. It only changes when you connect the device to another network.
+
+### How long the Wi-Fi information is retained?
+It is retained forever and changes only when the device is connected to another network.
+
+### How can we change the Wi-Fi settings?
+When you bring the device to other places where the device can not connect to the last connected Wi-Fi access point, the device will automatically turn on its Wi-Fi hotspot. Then, you can connect and set up Wi-Fi settings again.
+
 ----------
-Copyright 2021 Aromajoin Corporation under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
+Copyright 2020 Aromajoin Corporation under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
