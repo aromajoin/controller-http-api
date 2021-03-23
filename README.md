@@ -22,13 +22,13 @@ Using a web browser on your device, navigate to this address: `http://192.168.1.
 
 From the list of Wi-Fi networks, choose your preferred local network and enter your password. After about 30 seconds, the Aroma Shooter will connect to your local network. Please wait for the success message before refreshing or navigating away from the page. After you receive a message confirming a successful connection, tap the name of the Wi-Fi network again and take note of your device's IP Address -- you'll need this to send requests in Part II. You may now reconnect your computer/phone to the local network. It's time to try sending requests.
 
-### Option 2 - Aroma Shooter iOS app (Only work with Firmware version lower than 2.0)
+### Option 2 - Aroma Shooter iOS app
 
 The Aroma Shooter app is available on the Apple App Store:
 
 https://apps.apple.com/app/aroma-shooter/id1477144583
 
-After you install the app, tap the settings button in the bottom left corner of the screen, tap "Others," then tap "Setup AromaShooter's Wi-Fi," and follow the on-screen prompts. On the screen titled "Aroma Shooter Wi-Fi Connection," choose your preferred local Wi-Fi network and enter your credentials. After you receive a message confirming a successful connection, tap the name of the Wi-Fi network again and take note of your device's IP Address -- you'll need this to send requests in Part II. Tap "OK" then "Done" to return to the settings menu.
+After you install the app, tap the settings button in the bottom left corner of the screen, tap "Others," then tap "Setup AromaShooter's Wi-Fi," and follow the firmware version on-screen prompts. On the screen titled "Aroma Shooter Wi-Fi Connection," choose your preferred local Wi-Fi network and enter your credentials. After you receive a message confirming a successful connection, tap the name of the Wi-Fi network again and take note of your device's IP Address -- you'll need this to send requests in Part II. Tap "OK" then "Done" to return to the settings menu.
 
 ## II. APIs
 
