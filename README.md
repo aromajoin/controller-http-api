@@ -9,6 +9,7 @@ Aromajoin's HTTP APIs are available for Aroma Shooters with serial numbers begin
 ## I. Wi-Fi connection setup
 
 There are two methods of connecting an Aroma Shooter to a Wi-Fi network: via Aromajoin's official iOS application or via a web browser.
+**Notes: In order to control Aroma Shooter, you have to setup WiFi and connect Aroma Shooter to the router. It could be not controlled in Hotspot mode.**
 
 ### Recommended Option - Web Browser
 
