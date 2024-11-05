@@ -94,6 +94,18 @@ https://apps.apple.com/app/aroma-shooter/id1477144583
 }
 ```
 
+**AromaShooter® 3への対応に関して**
+* 「ch8」（または、「ch7」）の追加により、外部のブースターファンの動作が可能です。
+*例えば:*
+```json
+{
+    "channels": [1,3,5,8],
+    "intensities": [100,50,25,100],
+    "durations": [1000,2000,3000,3000],
+    "booster": true
+}
+```
+
 **ファームウェアバージョン 1.x.x**
 ```javascript
 {
